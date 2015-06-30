@@ -4,7 +4,6 @@ using LINQPad.NHibernate.FormatSQL.Sample.Entities;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
