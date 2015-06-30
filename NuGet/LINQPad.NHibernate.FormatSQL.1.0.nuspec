@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>LINQPad.NHibernate.FormatSQL</id>
+        <version>1.0</version>
+        <title>LINQPad.NHibernate.FormatSQL</title>
+        <authors>Tom Chantler</authors>
+        <owners>Tom Chantler</owners>
+        <projectUrl>https://github.com/TomChantler/LINQPad.NHibernate.FormatSQL</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Format the SQL output on the SQL tab when using your existing NHibernate assemblies in LINQPad. Import into LINQPad and run the sample .linq query to learn more.</description>
+        <language>en-US</language>
+        <tags>LINQPad NHibernate linqpad-samples</tags>
+    </metadata>
+    <files>
+        <file src="lib\net45\LINQPad.NHibernate.FormatSQL.dll" target="lib\net45\LINQPad.NHibernate.FormatSQL.dll" />
+        <file src="linqpad-samples\LPNHSample.linq" target="linqpad-samples\LPNHSample.linq" />
+    </files>
+</package>
