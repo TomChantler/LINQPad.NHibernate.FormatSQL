@@ -65,11 +65,16 @@ namespace LINQPad.NHibernate.FormatSQL
                     output = output.Substring(0, startOfParameters - 1);
                     foreach (var parameter in parameters)
                     {
-                        output = output.Replace(parameter.key, parameter.value);
+                        var newValue = parameter.value;
+                        if (newValue.StartsWith("'") && newValue.EndsWith("'"))
+                        {
+                            newValue = "'" + newValue.Substring(1, newValue.Length - 2).Replace("'", "''") + "'";
+                        }
+                        output = output.Replace(parameter.key, newValue);
                     }
                 }
 
-                output = "-- Region Query: " + ++counter + "\r\n" + output.Replace("'", "''").Trim() + "\r\n-- EndRegion";// QUERY: " + counter;
+                output = "-- Region Query: " + ++counter + "\r\n" + output.Trim() + "\r\n-- EndRegion";
                 Util.SqlOutputWriter.WriteLine(output);
                 return "NHibernate query redirected to SQL Tab (" + counter + " quer" + (counter == 1 ? "y" : "ies") + " redirected in this batch)";
             }
