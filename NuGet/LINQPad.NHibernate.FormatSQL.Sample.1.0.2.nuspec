@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>LINQPad.NHibernate.FormatSQL.Sample</id>
+        <version>1.0.2</version>
+        <title>LINQPad.NHibernate.FormatSQL.Sample</title>
+        <authors>Tom Chantler</authors>
+        <owners>Tom Chantler</owners>
+        <projectUrl>https://github.com/TomChantler/LINQPad.NHibernate.FormatSQL</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Sample database project for use with LINQPad.NHibernate.FormatSQL in LINQPad.</description>
+        <language>en-US</language>
+        <tags>LINQPad NHibernate linqpad-samples</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="System.Data.SQLite.Core" version="1.0.97.0" />
+                <dependency id="FluentNHibernate" version="2.0.1.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\src\LINQPad.NHibernate.FormatSQL.Sample\bin\Release\LINQPad.NHibernate.FormatSQL.Sample.dll" target="lib\net45\LINQPad.NHibernate.FormatSQL.Sample.dll" />
+        <file src="linqpad-samples\LPNHSample.linq" target="linqpad-samples\LPNHSample.linq" />
+    </files>
+</package>
