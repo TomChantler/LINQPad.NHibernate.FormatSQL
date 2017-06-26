@@ -70,7 +70,7 @@ namespace LINQPad.NHibernate.FormatSQL
                         {
                             newValue = "'" + newValue.Substring(1, newValue.Length - 2).Replace("'", "''") + "'";
                         }
-                        output = output.Replace(parameter.key, newValue);
+                        output = Regex.Replace(output, string.Format(@"{0}(?!\d)", parameter.key), newValue);
                     }
                 }
 
